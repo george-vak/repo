@@ -1,3 +1,2 @@
-12234324
-123413
-2343243
+a, b, c = eval(input())
+print(type(a), type(b), type(c))
