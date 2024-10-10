@@ -15,7 +15,13 @@ def matrix_multiply(A, B, n):
     return r
 
 m = []
-while line := input():
+line = input()
+m.append(list(map(int, line.split(','))))
+
+l = len(m[0]) * 2 - 1
+
+for i in range(l):
+    line = input()
     m.append(list(map(int, line.split(','))))
 
 n = len(m)//2
@@ -25,4 +31,3 @@ B = (m[len(m)//2:])
 if sqr_test(A, n) and sqr_test(B, n):
     for e in matrix_multiply(A, B, n):
         print(*e, sep=',')
-
