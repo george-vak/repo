@@ -1,2 +1,2 @@
 a = eval(input())
-print(sorted(a))
+print(*sorted(a), sep=', ')
