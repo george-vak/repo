@@ -10,4 +10,4 @@ def pareto(a):
             res.append(el)
     return res
 
-print(*pareto(eval(input())))
+print(tuple(pareto(eval(input()))))
