@@ -32,7 +32,6 @@ gas_rows = new_h - l_rows
 gas_out = gas_rows * new_w
 liquid_out = l_rows * new_w
 
-
 print("#" * (new_w + 2))
 while gas_rows > 0:
     print("#", "." * new_w, "#", sep='')
@@ -43,10 +42,16 @@ while l_rows > 0:
     l_rows -= 1
 print("#" * (new_w + 2))
 
-g = "." * gas_out
-l = "~" * liquid_out
-
-print(f"{g:<{max(gas_out, liquid_out)}} {gas_out:>{len(str(v))}}/{v}")
-print(f"{l:<{max(gas_out, liquid_out)}} {liquid_out:>{len(str(v))}}/{v}")
 
 
+kf = (min(gas_out, liquid_out) / max(gas_out, liquid_out))
+
+if liquid_out > gas_out:
+    g_s = ("." * int(20 * kf))
+    l_s = ("~" * 20)
+else:
+    g_s = ("." * 20)
+    l_s = ("~" * int(20 * kf))
+
+print(f"{g_s:<20} {gas_out:>{len(str(v))}}/{v}")
+print(f"{l_s:<20} {liquid_out:>{len(str(v))}}/{v}")
