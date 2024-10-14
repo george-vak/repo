@@ -46,7 +46,7 @@ print("#" * (new_w + 2))
 
 kf = (min(gas, liquid) / max(gas, liquid))
 
-if liquid_out > gas_out:
+if liquid > gas:
     g_s = ("." * int(20 * kf))
     l_s = ("~" * 20)
 else:
