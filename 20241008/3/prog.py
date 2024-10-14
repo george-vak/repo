@@ -44,7 +44,7 @@ print("#" * (new_w + 2))
 
 
 
-kf = (min(gas_out, liquid_out) / max(gas_out, liquid_out))
+kf = (min(gas, liquid) / max(gas, liquid))
 
 if liquid_out > gas_out:
     g_s = ("." * int(20 * kf))
@@ -53,5 +53,6 @@ else:
     g_s = ("." * 20)
     l_s = ("~" * int(20 * kf))
 
-print(f"{g_s:<20} {gas_out:>{len(str(v))}}/{v}")
-print(f"{l_s:<20} {liquid_out:>{len(str(v))}}/{v}")
+print(f"{g_s:<20} {gas:>{len(str(v))}}/{v}")
+print(f"{l_s:<20} {liquid:>{len(str(v))}}/{v}")
+
