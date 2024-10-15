@@ -1,0 +1,8 @@
+:f x y x//y
+:g s s+"ZZZ"
+:L x x%100
+f 17 3
+g "khsvhkwbe"
+L 24
+L 513
+quit "{} :: {}"

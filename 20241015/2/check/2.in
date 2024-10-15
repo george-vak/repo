@@ -1,0 +1,9 @@
+:f x y z x*x+y*y+z*z
+:g s len(s)
+:L x x+2
+f 1 2 3
+g "aaaaaaaaaa"
+L 2
+L 5
+quit "{} --- {}"
+
