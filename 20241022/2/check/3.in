@@ -1,0 +1,1 @@
+print(*list(slide(["aaa", "jnvj", "jhsbv", "lleiucn", "kwwuhe"], 2)))
