@@ -1,0 +1,7 @@
+a, b, c, d = Omnibus(), Omnibus(), Omnibus(), Omnibus()
+a.i = b.i = "jsns"
+b.k = d.m = bin
+print(a.i, d.i, a.k, d.m)
+del a.k, a.m, a.i
+a.m = d.m
+print(a.i, d.i, a.k, c.m)

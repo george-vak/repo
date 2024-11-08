@@ -1,0 +1,8 @@
+a, d = Omnibus(), Omnibus()
+b = c = a
+a.s = b.s = "klms"
+print(a.s, b.s, c.s, d.s)
+d.k = a.k = range(5, 10)
+del a.s, b.s
+d.s = "wms"
+print(f"{c.s}, {d.k}")
