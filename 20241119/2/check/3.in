@@ -1,0 +1,11 @@
+class C:
+    num = Num()
+
+obj1, obj2 = C(), C()
+obj1.num = 10
+obj2.num = [1, 2, 3, 4, 5]
+print(obj1.num + obj2.num)
+obj1.num = range(5)
+obj2.num = "hello world"
+print(obj1.num + obj2.num)
+
