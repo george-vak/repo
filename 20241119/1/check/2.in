@@ -1,0 +1,31 @@
+@objcount
+class A:
+    def __init__(self, name):
+        self.name = name
+
+@objcount
+class B:
+    def __init__(self, name):
+        self.name = name
+
+    def __del__(self):
+        print(f"Deleting {self.name}")
+
+
+print(A.counter)
+a = A("A")
+print(A.counter)
+b = A("B")
+print(A.counter)
+del a
+print(A.counter)
+
+print(B.counter)
+c = B("C")
+print(B.counter)
+d = B("D")
+print(B.counter)
+del c
+print(B.counter)
+del d
+print(B.counter)
