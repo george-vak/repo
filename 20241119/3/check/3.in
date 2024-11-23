@@ -1,0 +1,31 @@
+a = Alpha(a = 12, b = 23)
+aq = AlphaQ(a = 12, b = 23)
+try:
+    a = Alpha(a = 12, b = 23, vv = 0)
+except AttributeError as e:
+    print("1correct")
+
+try:
+    aq = Alpha(a = 12, b = 23, vv = 0)
+except AttributeError as e:
+    print("2correct")
+
+try:
+    a.dd = 0
+except AttributeError as e:
+    print("3correct")
+
+try:
+    aq.dd = 0
+except AttributeError as e:
+    print("4correct")
+
+try:
+    c = a.r
+except AttributeError as e:
+    print("5correct")
+
+try:
+    c = aq.d
+except AttributeError as e:
+    print("6correct")

@@ -1,0 +1,17 @@
+import time
+def measure_performance(cls, n):
+    obj = cls()
+    start_time = time.time()
+    for i in range(n):
+        attr = chr(ord('a') + (i % 26))
+        setattr(obj, attr, i)
+        atttr2 = getattr(obj, attr)
+    return time.time() - start_time
+
+n = 10**6
+
+time_alpha = measure_performance(Alpha, n)
+time_alphaq = measure_performance(AlphaQ, n)
+
+print(f"Alpha: {time_alpha} sec \nAlphaQ: {time_alphaq} sec\nFaster: {"Alpha" if time_alpha < time_alphaq else "AlphaQ"}")
+
