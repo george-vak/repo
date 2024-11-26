@@ -1,3 +1,4 @@
-Alpha: 0.1645808219909668 sec 
-AlphaQ: 0.3958902359008789 sec
-Faster: Alpha
+a: 12, i: 3, y: 22 False
+a: 12, e: 100500, i: 3, o: 100500, u: 100500, y: 22 True
+True
+True

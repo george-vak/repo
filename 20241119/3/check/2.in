@@ -1,17 +1,14 @@
-import time
-def measure_performance(cls, n):
-    obj = cls()
-    start_time = time.time()
-    for i in range(n):
-        attr = chr(ord('a') + (i % 26))
-        setattr(obj, attr, i)
-        atttr2 = getattr(obj, attr)
-    return time.time() - start_time
+wo = Vowel(y=22, a=12, i=3)
+print(wo, wo.full)
+wo.e = wo.o = wo.u = 100500
+print(wo, wo.full)
 
-n = 10**6
+try:
+    wo.answer = 2
+except AttributeError as e:
+    print("True")
 
-time_alpha = measure_performance(Alpha, n)
-time_alphaq = measure_performance(AlphaQ, n)
-
-print(f"Alpha: {time_alpha} sec \nAlphaQ: {time_alphaq} sec\nFaster: {"Alpha" if time_alpha < time_alphaq else "AlphaQ"}")
-
+try:
+    wo.full = 89
+except AttributeError as e:
+    print("True")

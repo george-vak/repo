@@ -1,31 +1,13 @@
-a = Alpha(a = 12, b = 23)
-aq = AlphaQ(a = 12, b = 23)
-try:
-    a = Alpha(a = 12, b = 23, vv = 0)
-except AttributeError as e:
-    print("1correct")
+wo = Vowel(y=22, a=12, i=3)
+wo.e = wo.o = wo.u = 100500
+print(wo, wo.full)
 
 try:
-    aq = Alpha(a = 12, b = 23, vv = 0)
+    wo.g = 2
 except AttributeError as e:
-    print("2correct")
+    print("True")
 
 try:
-    a.dd = 0
+    t = wo.h
 except AttributeError as e:
-    print("3correct")
-
-try:
-    aq.dd = 0
-except AttributeError as e:
-    print("4correct")
-
-try:
-    c = a.r
-except AttributeError as e:
-    print("5correct")
-
-try:
-    c = aq.d
-except AttributeError as e:
-    print("6correct")
+    print("True")
