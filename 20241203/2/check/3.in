@@ -1,0 +1,6 @@
+store 10 x
+store 20 y
+ifeq x y equal
+out not_equal
+stop
+equal: out equal
