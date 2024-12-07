@@ -1,0 +1,5 @@
+class C(metaclass=dump):
+    def multiply(self, x, y):
+        return x * y
+obj = C()
+print(obj.multiply(5, 6)) 
